@@ -13,74 +13,75 @@
   <title>Vaccine Search </title>
 </head>
 <body>
-  <h1>Hello, world!</h1>
+  <header>
 
-  <!-- State list -->
-  <div class="dropdown">
-    <button class="dropBtn" onclick="toggleState()">State</button>
-    <div class="dropdown-state">
-      <ul id=states></ul>
+
+    <div class="heading">
+      <img src="img/logo.png" alt="" srcset="" class="logo">
+      MyVaccine
+      <div>
+        An Initiative to make INDIA a vaccine-nation
+      </div>
     </div>
+
+
+  </header>
+  <div class="content">
+    <div class="message"> <strong> Welcome!</strong> Search nearest Covid-19 vaccine slot and Set alert for slot availabiltity <span id="closeBtn">&#10006</span></div>
+    <div class="container">
+      <!-- State list -->
+      <div class="dropdown">
+        <button class="dropBtn" onclick="toggleState()">State</button>
+        <div class="dropdown-state">
+          <ul id=states class="list-ul"></ul>
+        </div>
+      </div>
+
+
+      <div class="dropdown">
+        <button class="dropBtn" onclick="toggleDistrict()">District</button>
+        <div class="dropdown-district">
+          <ul id=districts class="list-ul"></ul>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="dropBtn" onclick="toggleCentre()">Centre</button>
+        <div class="dropdown-centre">
+          <ul id=centres class="list-ul"></ul>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="center-name">
+        <span class="centreName">name</span> 
+        <!-- <button id="alertBtn" onclick="slotAlert()"> Alert</button> -->
+      </div>
+      <table class="tableBox">
+        <!-- <thead class="tHead">
+          <tr>
+            <th>Date</th>
+            <th>Dose1</th>
+            <th>Dose2</th>
+          </tr>
+        </thead> -->
+        <tbody class='tBody'>
+
+        </tbody>
+      </table>
+
+
+    </div>
+
   </div>
+  <footer>
+    |Copyright © 2021 ShouryaSrivastava | All right reserved   
+  </footer>
 
 
-  <div class="dropdown">
-    <button class="dropBtn" onclick="toggleDistrict()">District</button>
-    <div class="dropdown-district">
-      <ul id=districts></ul>
-    </div>
-      <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-        <li id='01' onclick="clickHandler()">Hey</li>
-        <li><a class="dropdown-item" href="#" onclick="click()">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
-        <li><a class="dropdown-item" href="#">Separated link</a></li>
-      </ul>
-    </div>
-    
 
-    <table class="tableBox">
-      <thead >
-        <tr class="tHead"></tr>
-      </thead>
-      <tbody class="tBody">
-        
-                    
-          <!-- <td >Gudamba CHC</td>
-          <td  >
-            <li>Dose1:</li>
-            <li>Dose2:</li>
-          </td>
-          <td  >
-            <li>Dose1:</li>
-            <li>Dose2:</li>
-          </td>
-          <td  >
-            <li>Dose1:</li>
-            <li>Dose2:</li>
-          </td>
-          <td  >
-            <li>Dose1:</li>
-            <li>Dose2:</li>
-          </td>
-          <td  >
-            <li>Dose1:</li>
-            <li>Dose2:</li>
-          </td>
-          <td  >
-            <li>Dose1:</li>
-            <li>Dose2:</li>
-          </td> -->
-        </tr>
-      
-      </tbody>
-    </table>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
 
 
 </body>
