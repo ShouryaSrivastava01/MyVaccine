@@ -47,10 +47,14 @@ function Slot() {
     })
 }
 
-
+function showStateName(){
+    let stateBtn=document.querySelector('.dropBtn');
+    stateBtn.innerHTML='name';
+}
 // district list is fetched respective to selected state and showCentre function is fired
-function showDistrict(state) {
-
+function showDistrict(state, name) {
+    console.log(name)
+    showStateName();
     let url = `https://cdn-api.co-vin.in/api/v2/admin/location/districts/${state}`
     fetch(url).then(response => response.json()).then((data) => {
         console.log(data)       //District list respective to selected state
@@ -227,23 +231,22 @@ function getMonthName(index) {
 
 // alertBtn.addEventListener('click', slotAlert())
 function slotAlert(centreId) {
-    alert(`Book a Slot`)
     setInterval(() => {
         fetch(`https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByCenter?center_id=${centreId}&date=${date}`).then(response => response.json()).then((data) => {
             let tableBody = document.querySelector('.tBody')
             tableBody.innerHTML = ``;
             let html = ``;
             html = `<thead class="tHead">
-        <tr>
+            <tr>
           <th>Date</th>
           <th>Dose1</th>
           <th>Dose2</th>
-        </tr>
-      </thead>
+          </tr>
+          </thead>
       <tbody class='tBody'>
-
+      
       </tbody>`
-            // console.log(name);
+      // console.log(name);
             let slotSession = data.centers
             // displayName.innerHTML=`<span class="centreName"></span> <button id="alertBtn"> Alert</button>`
             // centreName.innerHTML=slotSession['name']
@@ -255,14 +258,15 @@ function slotAlert(centreId) {
             Slots.forEach((key) => {
                 console.log(key['available_capacity']);
                 html += `<tr class="tLine" >
-            <td>${key['date']}</td>
-            <td>
-            ${key['available_capacity_dose1']}
-            </td>
-            <td>${key['available_capacity_dose2']}</td>
-            </tr>`
+                <td>${key['date']}</td>
+                <td>
+                ${key['available_capacity_dose1']}
+                </td>
+                <td>${key['available_capacity_dose2']}</td>
+                </tr>`
                 if (`${key['available_capacity_dose1']}` > 0) {
                     var audio = new Audio('audio.mp3');
+                    alert(`Book a Slot`)
                     audio.play();
                 }
                 tableBody.innerHTML = html;
