@@ -14,5 +14,18 @@
   ],
   "author": "Shourya Srivastava",
   "license": "ISC",
-  "dependencies": {}
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "nexmo": "^2.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShouryaSrivastava01/MyVaccine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ShouryaSrivastava01/MyVaccine/issues"
+  },
+  "homepage": "https://github.com/ShouryaSrivastava01/MyVaccine#readme"
 }
