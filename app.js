@@ -25,24 +25,24 @@ app.get('/', (req, res)=>{
     res.render('index');
 } )
 
-// app.post('/', (req, res)=>{
-//         // res.send(req.body)
-//         // console.log(req.body)
-//         const number= req.body.number
-//         const text="hello"
+app.post('/', (req, res)=>{
+        // res.send(req.body)
+        // console.log(req.body)
+        const number= req.body.number
+        const text=req.body.text
 
-//         nexmo.message.sendSms(
-//             '123456', number, text, {type: 'unicode'}, 
-//             (err, responseData)=>{
-//                 if(err){
-//                     console.log(err)
-//                 }
-//                 else{
-//                     console.log(responseData)
-//                 }
-//             }
-//         )
-// })
-app.listen(3000, ()=>{
+        nexmo.message.sendSms(
+            '123456', number, text, {type: 'unicode'}, 
+            (err, responseData)=>{
+                if(err){
+                    console.log(err)
+                }
+                else{
+                    console.log(responseData)
+                }
+            }
+        )
+})
+app.listen(80, ()=>{
     console.log('successful');
 })
