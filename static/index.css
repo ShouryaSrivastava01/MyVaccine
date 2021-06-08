@@ -14,8 +14,8 @@ header{
   /* border: 2px solid rgb(8, 8, 8); */
   filter: invert(100%);
   display: inline-block;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
 }
 
 .heading{
@@ -23,7 +23,7 @@ header{
 }
 .heading div{
   /* border: 2px solid white; */
-  font-size: 10px;
+  font-size: 12px;
 }
 .content{
   /* background-color: yellow; */
@@ -42,11 +42,11 @@ header{
   opacity: .3;
 }.message{
   background-color: rgba(112, 112, 212, 0.89);
-  margin: 4px 4px;
-  border-radius: 6px;
-  padding: 1px 20px;
-  color: black;
-  font-size: .8em;
+margin: 4px 4px;
+border-radius: 6px;
+padding: 2px 20px;
+color: black;
+font-size: 1em;
   /* font-weight: bolder; */
  
 }
@@ -64,9 +64,10 @@ header{
 }
 .container{
   /* border: 2px solid black; */
-  display: flex;
-  justify-content: center;
-  margin: 20px auto;
+display: flex;
+justify-content: space-evenly;
+margin: 20px auto;
+width: 80%;
 }
 .dropdown {
     position: relative;
@@ -79,14 +80,14 @@ header{
   
   .dropBtn {
     background-color: #0f71b3;
-    color: white;
-    /* padding: 16px; */
-    width: 100px;
-    height: 1.8em;
-    /* font-size: 16px; */
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
+color: white;
+
+width: 200px;
+height: 2.5em;
+font-size: 16px;
+border: none;
+cursor: pointer;
+border-radius: 4px;
   }
 
   .dropBtn:hover, .dropbtn:focus {
@@ -142,45 +143,47 @@ header{
   cursor: pointer;
 }
 .center-name{
-  margin: 2px auto;
+  margin: 30px auto;
   /* border: 1px solid rgb(110, 109, 109); */
   width: 45%;
   position: relative;
-  display: none;
+  /* display: none; */
+  font-size: 20px;
 }
+
 
 #alertBtn{
   position: absolute;
-  right: 10px;
-  color: rgb(90, 89, 88);
-  height: 20px;
-  width: 40px;
-  padding: 0;
-  font-size: 12px;
-  border: none;
-  background-color: rgb(201, 5, 5);
-  color: white;
-  border-radius: 10px;
+right: 10px;
+height: 30px;
+width: 60px;
+padding: 0;
+font-size: 15px;
+border: none;
+background-color: rgb(230, 12, 12);
+color: white;
+border-radius: 15px;
+box-shadow: 0 0 2px 2px rgb(255, 0, 0);
 }
+
 #alertBtn:hover,  #alertBtn:focus{
-  
-  
-  height: 20px;
-  width: 40px;
+  height: 30px;
+  width: 60px;
   padding: 0;
-  font-size: 10px;
+  font-size: 15px;
   border: none;
-  background-color: rgb(255, 8, 8);
+  background-color: rgb(253, 56, 56);
   color: white;
-  font-weight: bolder;
-  border-radius: 10px;
+  
+  border-radius: 15px;
 }
 .tableBox{
   /* display: block; */
-  margin: 2px auto;
-  border: 1px solid rgb(110, 109, 109);
-  width: 45%;
-  /* background-color: #95d7ff; */
+margin: 20px auto;
+/* border: 1px solid rgb(110, 109, 109); */
+width: 45%;
+/* background-color: #95d7ff; */
+box-shadow: 0px 0px 10px 2px;
 }
 .tableBox:hover{
   box-shadow: 16px rgba(248, 19, 19, 0.2);
@@ -206,21 +209,21 @@ footer{
 
 .smsAlert{
   position: fixed;
-  top: 40%;
-  left: 50%;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 10px;
-  letter-spacing: 2px;
-  border: 2px solid red;
-  display: block;
-  margin: 2px auto;
-  /* /* width: 350px; */
-  height: 100px;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  display: none;
+top: 40%;
+left: 50%;
+justify-content: center;
+align-items: center;
+text-align: center;
+padding: 10px 30px;
+letter-spacing: 2px;
+/* border: 2px solid red; */
+display: block;
+margin: 2px auto;
+height: 120px;
+transform: translate(-50%, -50%);
+background-color: white;
+display: none;
+box-shadow: 0px 0px 40px 5px;
 }
 
 #closeSmsBtn{
