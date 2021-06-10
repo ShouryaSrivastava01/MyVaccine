@@ -1,5 +1,4 @@
 
-
 var success = document.querySelector('.success')
 var dropdownState = document.querySelector('.dropdown-state')
 var dropdownDistrict = document.querySelector('.dropdown-district')
