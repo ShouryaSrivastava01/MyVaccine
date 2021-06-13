@@ -252,7 +252,7 @@ function slotAlert(centreId) {
 
 
 function closeAlert() {
-    console.log('shit ')
+    
     smsAlert.style.display = 'none'
     content.style.filter = "none";
     success.style.visibility = 'hidden'
